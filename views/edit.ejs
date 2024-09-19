@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Edit Posts</title>
+</head>
+<body>
+    <h2>Edit your post</h2>
+    <p>post id:<%= post.id %></p>
+    <p>post username:<%= post.username %></p>
+    <form action="http://localhost:8080/posts/<%= post.id %>?__method=PATCH" method="post">
+        <textarea name="content" id="" cols="30" rows="10"><%= post.content %></textarea><br><br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
